@@ -3,8 +3,7 @@
 
  1. `聊天室基于C/S模型设计`
  2. `开发工具`
- 　
-
+ 
 > Deepin GNU/Linux 20.2.1  　
 > gcc编译器
 
@@ -24,15 +23,21 @@
 
 服务端用到epoll+单线程实现
 客户端分两个线程－一读一写
+
    **1 服务端**
+   
    　运用了epoll+单线程
     
+    
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/81fe1eb0ca014f7794bfaa385c6f9d91.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl81MTI1OTgzNA==,size_16,color_FFFFFF,t_70#pic_center)
+  
   1 第一先处理连接请求，事件请求等待
+  
   2 若文件描述符可读则处理此事件
 
 
    **2 客户端**
+   
    	　开了两个线程，一个接收服务器发的包，一个向服务器发包
      
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/4c619a580482470fa19fc300898a49e3.jpg#pic_center)
