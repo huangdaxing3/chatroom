@@ -43,7 +43,9 @@
    ![在这里插入图片描述](https://img-blog.csdnimg.cn/4c619a580482470fa19fc300898a49e3.jpg#pic_center)
    
    1.第一目录：注册登录  
+   
    2.第二目录：细分为－朋友、群、修改密码、好友请求、退出
+
    3.第三目录：实现聊天室的各项功能
 
 
@@ -51,9 +53,11 @@
 
 `服务端：`
 >  gcc -I/usr/include/mariadb/mysql server.c -lmysqlclient -ldl -lpthread -o server
+
 >  ./server
 
 `客户端：`
 
 > gcc client.c -o client -lpthread
+
 > ./client -a 127.0.0.1 -p 4507     【**-a后加IP，-p后加设置端口号**】
